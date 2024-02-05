@@ -1,0 +1,14 @@
+<div class="">
+    <div class="card card-metro overflow-hidden rounded-3 bg-success">
+        <img [src]="labImage" alt="">
+        <!-- Image overlay -->
+        <div class="card-img-overlay d-flex flex-column">
+            <!-- Info -->
+            <div class="mt-auto card-text">
+                <a routerLink="lab-studio" [queryParams]="{id: labId}"  class="text-light mt-auto fs-5 stretched-link">{{labName}}</a>
+                <div> <a routerLink="lab-studio" [queryParams]="{id: labId}" class="text-white">Academic Year: {{academicYear}}</a> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Card item END -->

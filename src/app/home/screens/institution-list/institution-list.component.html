@@ -1,0 +1,21 @@
+<div class="container my-3" *ngIf="institutionsList.length != 0">
+    <h5>Institutions</h5>
+    <div class="row">
+        <div class="col-3 my-2" *ngFor="let institute of institutionsList">
+            <a routerLink="/auth/institution-login" [queryParams]="{id: institute._id}" style="text-decoration: none;">
+            <div class="card text-bg-primary text-center p-3">
+                <figure class="mb-0">
+                    <blockquote class="blockquote">
+                        <p>{{institute.instituteName}}</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0 text-white">
+                        {{institute.code}} <cite title="Source Title">{{institute.websiteUrl}}</cite>
+                    </figcaption>
+                </figure>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div *ngElse></div>

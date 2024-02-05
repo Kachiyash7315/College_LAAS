@@ -1,0 +1,39 @@
+<section class="container joinclassroomgradient" *ngIf="role == 'student'">
+    <div class="row">
+        <div class="col-12">
+            <h4>Join Classroom</h4>
+            <form [formGroup]="classroomForm" (submit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="exampleInputCode" class="form-label">Classroom Id</label>
+                    <input type="text" class="form-control" id="exampleInputCode" aria-describedby="emailHelp"
+                        formControlName="classroomId">
+                    <div id="emailHelp" class="form-text">Enter valid code to join classroom</div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-warning" type="submit">Join Classroom</button>
+                </div>
+            </form>
+            <br>
+            <hr>
+            <br>
+            <div class="row g-4 g-lg-5">
+                <!-- Item -->
+                <div class="col-sm-6 col-xl-3 fadeout" *ngFor="let cLass of classrooms">
+                    <a routerLink="dashboard/student/classroom" [queryParams]="{name: cLass.name, id: cLass._id}">
+                        <div class="bg-body shadow rounded-3 text-center p-4 position-relative">
+                            <!-- Image -->
+                            <img src="assets/images/element/abc.svg" class="h-100px mb-3" alt="">
+                            <!-- Title -->
+                            <h5 class="mb-2"><a href="#" class="stretched-link">{{cLass.name}}</a></h5>
+                            <p class="text-truncate-2 mb-2">{{cLass.classroomId}}</p>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

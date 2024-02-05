@@ -1,0 +1,135 @@
+<app-navbar title="LAAS"></app-navbar>
+
+
+<div class="container" *ngIf="role === 'user'">
+    <div class="container">
+        <div class="row h-100 my-3 gutter">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 border p-5">
+                <h4 style="text-align: center;">Join an Institution</h4>
+                <div class="d-flex justify-content-center">
+                    <a routerLink="/onboarding/student" type="button" class="btn btn-dark">As Student</a>
+                    <a routerLink="/onboarding/instructor" type="button" class="btn btn-dark mx-1">As Instructor</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 border p-5">
+                <h4 style="text-align: center;">Create Institute</h4>
+                <div class="d-flex justify-content-center">
+                    <a routerLink="/onboarding/institution" type="button" class="btn btn-dark">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-institution-list></app-institution-list>
+
+<app-join-classroom></app-join-classroom>
+
+
+
+<app-info-section1></app-info-section1>
+
+
+
+
+<div class="container my-3">
+    <div class="d-flex flex-column flex-md-row gutter js-build-in-trigger build-in-animate">
+
+        <div class="col-md-6 d-flex">
+            <div class="overflow-hidden rounded-3 mb-3 mb-md-5 home-skew js-home-skew"
+                style="transform: perspective(700px) rotateX(-0.03deg) rotateY(0.03deg);">
+                <div
+                    class="feature-card-mktg js-feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column">
+                    <div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+                        <p class="f2-mktg text-medium color-fg-muted mb-4">Welcome to our Lab-as-a-Service software,
+                            your one-stop solution for all your computational needs! Our web application provides easy
+                            access to a range of powerful tools that cater to the needs of students and developers
+                            alike.</p>
+
+                        <div> <a class="link-mktg text-semibold color-fg-default py-1 f3-mktg"
+                                data-analytics-event="{&quot;category&quot;:&quot;Discover GitHub Actions&quot;,&quot;action&quot;:&quot;click to Discover GitHub Actions&quot;,&quot;label&quot;:&quot;ref_cta:Discover GitHub Actions;&quot;}">
+                                Discover LAAS <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg"
+                                    width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path fill="currentColor"
+                                        d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                                    </path>
+                                    <path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11"
+                                        stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg>
+
+                            </a></div>
+                    </div>
+                    <div class="overflow-hidden rounded-bottom-3">
+                        <picture>
+                            <source
+                                srcset="https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=1209&amp;format=webpll 1209w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=967&amp;format=webpll 967w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=725&amp;format=webpll 725w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=604&amp;format=webpll 604w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=483&amp;format=webpll 483w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=241&amp;format=webpll 241w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" type="image/webp">
+                            <source
+                                srcset="https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png 1209w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=604 604w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=483 483w,https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png?width=302 302w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" type="image/png">
+                            <img class="width-full d-block height-auto js-build-in-item build-in-scale-fade build-in-animate"
+                                loading="lazy" decoding="async" alt="" aria-hidden="true"
+                                src="https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png"
+                                width="1209" height="890">
+                        </picture>
+                    </div>
+
+
+                    <div class="position-absolute bottom-0 right-0 events-none home-feature-card-shine js-feature-card-shine-mktg z-n1"
+                        style="transform: translate(-13px, -137.41px);"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 d-flex">
+            <div class="overflow-hidden rounded-3 mb-3 mb-md-5 home-skew js-home-skew"
+                style="transform: perspective(700px) rotateX(-0.02deg) rotateY(0.03deg);">
+                <div
+                    class="feature-card-mktg js-feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-column">
+                    <div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
+                        <p class="f2-mktg text-medium color-fg-muted mb-4">At the heart of our software lies
+                            Code-Studio, a web-based editor that harnesses the power of cloud computing to enable
+                            seamless editing of code in real-time. Whether you're working on a personal project or
+                            collaborating with a team, Code-Studio has got you covered.</p>
+
+                        <div> <a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" routerLink="/onboarding/institution"
+                                data-analytics-event="{&quot;category&quot;:&quot;Get GitHub Mobile&quot;,&quot;action&quot;:&quot;click to Get GitHub Mobile&quot;,&quot;label&quot;:&quot;ref_cta:Get GitHub Mobile;&quot;}">
+                                Create Institution <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill="currentColor"
+                                        d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                                    </path>
+                                    <path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11"
+                                        stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg>
+
+                            </a></div>
+                    </div>
+                    <div class="overflow-hidden rounded-bottom-3">
+                        <picture>
+                            <source
+                                srcset="https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=1208&amp;format=webpll 1208w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=966&amp;format=webpll 966w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=724&amp;format=webpll 724w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=604&amp;format=webpll 604w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=483&amp;format=webpll 483w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=241&amp;format=webpll 241w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" type="image/webp">
+                            <source
+                                srcset="https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png 1208w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=604 604w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=483 483w,https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png?width=302 302w"
+                                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 604px" type="image/png">
+                            <img class="width-full d-block height-auto js-build-in-item build-in-scale-fade build-in-animate"
+                                loading="lazy" decoding="async" alt="" aria-hidden="true"
+                                src="https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png"
+                                width="1208" height="764">
+                        </picture>
+                    </div>
+
+
+                    <div class="position-absolute bottom-0 right-0 events-none home-feature-card-shine js-feature-card-shine-mktg z-n1"
+                        style="transform: translate(-301px, -22.56px);"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

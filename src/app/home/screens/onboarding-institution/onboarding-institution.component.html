@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="card border my-3" style="width: 33rem;">
+            <form [formGroup]="institutionForm" (ngSubmit)="onSubmit()">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center">Create Institution</h5>
+                    <p>Create Institute, Appoint Teachers, Create Remote Development Environments</p>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Enter Institution Name</label>
+                        <input type="text" class="form-control" formControlName="name"
+                            placeholder="Eg. Harward University">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Institution Email Id</label>
+                        <input type="email" class="form-control" formControlName="email" placeholder="joe@harward.edu">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Enter Institution Phone</label>
+                        <input type="tel" class="form-control" formControlName="phoneNo" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Enter location</label>
+                        <input type="text" class="form-control" formControlName="location" placeholder="Eg. Pune">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Enter Website</label>
+                        <input type="text" class="form-control" formControlName="website"
+                            placeholder="https://www.harvard.edu/">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Set a password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary">Proceed</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.navbar-custom {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.brand{
+    color: white;
+}

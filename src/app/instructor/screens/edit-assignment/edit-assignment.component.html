@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="col col-lg-12 col-12">
+        <div class="card bg-transparent border rounded-3 mb-5">
+            <div class="card-header bg-light border-bottom px-lg-5">
+                <h4>Submissions</h4>
+            </div>
+            <div class="card-body">
+                <a routerLink="/dashboard/instructor/lab-studio/assignment/submissions/" [queryParams]="{id: id}"
+                    class="btn btn-warning">Submission Reports</a>
+            </div>
+        </div>
+        <div class="card bg-transparent border rounded-3 mb-5">
+            <div class="card-header bg-light border-bottom px-lg-5">
+                <h4>Edit Assignment</h4>
+            </div>
+            <div class="card-body">
+                <form action="" [formGroup]="assignment" (submit)="onSubmit()">
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi-solid bi-list-task"></i> Assignment Name</label>
+                        <input class="form-control" type="text" placeholder="Enter Assignment Name"
+                            formControlName="assignmentName">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi-question-circle-fill"></i> Problem
+                            Statement</label>
+                        <input class="form-control" type="text" placeholder="Enter Assignment Name"
+                            formControlName="problemStatement">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi bi-journals"></i> Assignment
+                            Description</label>
+                        <ckeditor [editor]="Editor" data="<p>Hello, world!</p>" formControlName="description">
+                        </ckeditor>
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi-cpu"></i> Lab Environment</label>
+                        <select class="form-control" type="text" placeholder="Enter Assignment Name"
+                            formControlName="labtype">
+                            <option value="Compiler">Compiler</option>
+                            <option value="VM">VM</option>
+                            <option value="Jupyter Notebook">Jupyter Notebook</option>
+                            <option value="Theory">Theory</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi bi-journals"></i>Required RAM:
+                            {{assignment.value.ram}} MB</label>
+                        <input type="range" formControlName="ram" class="form-range" min="40" max="300"
+                            id="customRange2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi bi-journals"></i>Preffered Programming
+                            Language</label>
+                        <select class="form-control" type="text" placeholder="Enter Assignment Name"
+                            formControlName="programmingLaguage">
+                            <option value="Any">Any</option>
+                            <option value="Python">Python</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="Node.js">Node.js</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi bi-journals"></i> Dependancies Installation
+                            Scripts</label>
+                        <tag-input formControlName="dependancy" [placeholder]="placeHolder"
+                            [secondaryPlaceholder]="placeHolder"></tag-input>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><i class="bi bi bi-journals"></i> Due Date</label>
+                        <input class="form-control" formControlName="date" type="date" id="">
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-transparent border rounded-3 my-4">
+        <div class="card-header bg-transparent border-bottom">
+            <h5 class="card-header-title mb-0 text-danger">Danger Zone</h5>
+        </div>
+        <div class="card-body my-3">
+            <button class="btn btn-danger" (click)="deleteAssignment()">Delete Assignment</button>
+        </div>
+    </div>
+
+</div>

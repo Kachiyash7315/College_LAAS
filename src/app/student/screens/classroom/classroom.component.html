@@ -1,0 +1,21 @@
+<div class="container">
+    <h4>{{name}}</h4>
+    <hr>
+
+    <div class="row g-4 g-lg-5">
+        <!-- Item -->
+        <div class="col-sm-6 col-xl-3 fadeout" *ngFor="let lab of labs">
+            <a routerLink="/dashboard/student/assignments" [queryParams]="{name: lab.name, id: lab._id}">
+                <div class="bg-body shadow rounded-3 text-center p-4 position-relative">
+                    <!-- Image -->
+                    <img src="assets/images/science.png" class="h-100px mb-3" alt="">
+                    <!-- Title -->
+                    <h5 class="mb-2"><a href="#" class="stretched-link">{{lab.name}}</a></h5>
+                    <p class="text-truncate-2 mb-2">Last Updated: {{lab.updatedAt | date}}</p>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+
+</div>

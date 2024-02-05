@@ -1,0 +1,14 @@
+<div class="container mt-3" *ngIf="labsAppointed.length > 0">
+    <h4>Labs Appointed:</h4>
+    <div class="row g-4">
+        <div class="col col-lg-3" *ngFor="let lab of labsAppointed">
+            <app-lab-card [labId]="lab._id"
+            labImage="https://pbs.twimg.com/profile_images/818852933483823104/YYr9qgV8_400x400.jpg" [labName]="lab.name"
+            [academicYear]="lab.academicYear"></app-lab-card>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3" *ngIf="labsAppointed.length == 0">
+   <h3>You are not appointed to any lab</h3>
+</div>

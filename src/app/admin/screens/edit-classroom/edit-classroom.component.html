@@ -1,0 +1,39 @@
+<div class="col col-lg-6">
+    <form action="" [formGroup]="editClassRoomForm" (ngSubmit)="onClassroomFormSubmit()">
+        <div class="card bg-transparent border rounded-3">
+            <!-- Card header -->
+            <div class="card-header bg-transparent border-bottom">
+                <h5 class="card-header-title mb-0">Edit Classroom</h5>
+            </div>
+            <!-- Card body START -->
+            <div class="card-body">
+                <!-- Lab Name -->
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi-solid bi-mortarboard-fill"></i> Classroom
+                        Name</label>
+                    <input class="form-control" type="text" placeholder="Enter Lab Name"
+                        formControlName="name">
+                </div>
+
+                <!-- Button -->
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-primary mb-0">Save Changes</button>
+                </div>
+            </div>
+            <!-- Card body END -->
+        </div>
+    </form>
+</div>
+
+<div class="col col-lg-6">
+    <div class="card bg-transparent border rounded-3 my-4">
+        <div class="card-header bg-transparent border-bottom">
+            <h5 class="card-header-title mb-0 text-danger">Danger Zone</h5>
+        </div>
+
+        <div class="card-body my-3">
+            <button class="btn btn-danger" (click)="onDeleteClassroom()">Delete Classroom</button>
+        </div>
+
+    </div>
+</div>

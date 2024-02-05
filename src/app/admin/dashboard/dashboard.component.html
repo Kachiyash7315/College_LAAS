@@ -1,0 +1,79 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-lg-6 my-2">
+            <div class="card bg-transparent border rounded-3">
+                <!-- Card header -->
+                <div class="card-header bg-transparent border-bottom">
+                    <h5 class="card-header-title mb-0">Create Software Lab</h5>
+                </div>
+                <!-- Card body START -->
+                <form action="" [formGroup]="createLabForm" (ngSubmit)="onLabFormSubmit()">
+                    <div class="card-body">
+                        <!-- Lab Name -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi-solid bi-pc-display"></i> Lab Name</label>
+                            <input class="form-control" type="text" placeholder="Enter Lab Name" formControlName="labName">
+                        </div>
+
+                        <!-- Instructor -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi-solid bi-magic"></i> Appoint Instructor</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="instructor">
+                                <option [value]="x._id" selected *ngFor="let x of instructors">{{x.name}}</option>
+                            </select>
+                        </div>
+
+                        <!-- Academic Year -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi-solid bi-calendar-date me-2"></i>Academic
+                                Year</label>
+                            <input class="form-select" type="number" min="2014" max="2099" step="1" value="2019"  formControlName="year"/>
+                        </div>
+
+                        <!-- Classroom -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi-solid bi-mortarboard-fill"></i> Classroom</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="classroom">
+                                <option selected  *ngFor="let classRoom of classroom" [value]="classRoom.id">{{classRoom.name}}</option>
+                            </select>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-primary mb-0">Create Lab</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Card body END -->
+            </div>
+        </div>
+
+        <div class="col-lg-6 my-2">
+            <form action=""  [formGroup]="createClassRoomForm" (ngSubmit)="onClassroomFormSubmit()">
+                <div class="card bg-transparent border rounded-3">
+                    <!-- Card header -->
+                    <div class="card-header bg-transparent border-bottom">
+                        <h5 class="card-header-title mb-0">Create Classroom</h5>
+                    </div>
+                    <!-- Card body START -->
+                    <div class="card-body">
+                        <!-- Lab Name -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi-solid bi-mortarboard-fill"></i> Classroom
+                                Name</label>
+                            <input class="form-control" type="text" placeholder="Enter Lab Name" formControlName="name">
+                        </div>
+
+                        <!-- Button -->
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-primary mb-0">Create Classroom</button>
+                        </div>
+                    </div>
+                    <!-- Card body END -->
+                </div>
+            </form>
+
+        </div>
+    </div>   
+</div>

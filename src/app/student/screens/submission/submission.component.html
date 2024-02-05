@@ -1,0 +1,37 @@
+<div class="container">
+    <h4>Submission Status: {{name}}</h4>
+    <hr>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th scope="row">Name</th>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Problem Statement</th>
+                <td>{{ps}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Status</th>
+                <td>Submitted</td>
+            </tr>
+            <tr>
+                <th scope="row">Remarks</th>
+                <td>{{submission?.remarks || "No Remarks"}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Programming Language</th>
+                <td>{{submission?.language}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Date Submitted</th>
+                <td>{{submission?.createdAt | date}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Action</th>
+                <td><a [href]="waytoCompiler+'?role=student' + '&assignmentId=' + submission?.assignmentId + '&submissionId=' + submission?._id + '&token=' + token" class="btn btn-warning ml-3" style="margin-left:10px" >Open in Code Studio</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,65 @@
+<div class="container my-3">
+    <div class="card bg-transparent border rounded-3 mb-5">
+        <div class="card-header bg-light border-bottom px-lg-5">
+            <h4>Submissions</h4>
+            <h5>{{assignmentName}}</h5>
+            
+        </div>
+        <div class="card-body" *ngIf="submissions.length != 0">
+            <div class="table-responsive border-0">
+                <table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+                    <!-- Table head -->
+                    <thead>
+                        <tr>
+                            <th scope="col" class="border-0 rounded-start">Student Name</th>
+                            <th scope="col" class="border-0">Student Email</th>
+                            <th scope="col" class="border-0">Date Submitted</th>
+                            <th scope="col" class="border-0">Date Updated</th>
+                            <th scope="col" class="border-0">No of Attempts</th>
+                            <th scope="col" class="border-0">Programming Language</th>
+                            <th scope="col" class="border-0 rounded-end">Action</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Table body START -->
+                    <tbody>
+                        <!-- Table row -->
+                        <tr *ngFor="let sub of submissions">
+                            <td class="text-center text-sm-start">
+                                <h6 class="mb-0">{{sub.studentData.name}}</h6>
+                            </td>
+                            <td class="text-center text-sm-start">
+                                <h6 class="mb-0">{{sub.studentData.email}}</h6>
+                            </td>
+                            <td class="text-center text-sm-start">
+                                <h6 class="mb-0">{{sub.submission.createdAt | date}}</h6>
+                            </td>
+                            <td class="text-center text-sm-start">
+                                <h6 class="mb-0">{{sub.submission.updatedAt | date}}</h6>
+                            </td>
+                            <td class="text-center text-sm-start">
+                                <h6 class="mb-0">{{sub.submission.attempts}}</h6>
+                            </td>
+                            <td class="text-center text-sm-start">
+                                <h6 class="mb-0">{{sub.submission.language | titlecase}}</h6>
+                            </td>
+                            <td class="text-center text-sm-start">
+                                <a routerLink="/dashboard/instructor/lab-studio/assignment/submissions/check" [queryParams]="{id: sub.submission._id, name: sub.studentData.name, email:sub.studentData.email}" class="btn btn-info-soft btn-round mb-0"
+                                data-bs-toggle="modal" data-bs-placement="top" aria-label="Edit"
+                                data-bs-target="#exampleModal">
+                                <i class="bi bi-pen"></i>
+                            </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <!-- Table body END -->
+                </table>
+            </div>
+        </div>
+
+        <div class="card-body" *ngIf="submissions.length === 0">
+            <h4 class="my-4">No submissions recorded</h4>
+        </div>
+    </div>
+</div>

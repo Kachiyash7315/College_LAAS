@@ -1,0 +1,59 @@
+<div class="container">
+    <h4>Solve Assignment</h4>
+    <hr>
+    <div class="d-flex justify-content-between">
+        <div>
+            <h6><b>{{assignment?.name}}</b></h6>
+            <h5>{{assignment?.problemStatement}}</h5>
+        </div>
+        <div>
+            <h6>Date Created: {{assignment?.datecreated | date }}</h6>
+            <h5>Due Date: {{assignment?.dueDate | date }}</h5>
+        </div>
+    </div>
+
+    <hr>
+    <div [innerHTML]="assignment?.description"></div>
+    <hr>
+    <div>
+        <h4>System Specifications</h4>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <div>
+                <h6><b>RAM required: {{assignment?.ram}} MB</b></h6>
+                <h5><b>Storage Allocated: 7GB</b></h5>
+            </div>
+            <div>
+                <h6>Programming Language: {{assignment?.programmingLanguage }}</h6>
+                <h5>Lab Environment: {{assignment?.labEnvironment}}</h5>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div *ngIf="assignment?.dependencies">
+        <h4>Dependancies</h4>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <div>
+                <h6><b>Scripts: </b></h6>
+                <ul>
+                    <li *ngFor="let x of assignment?.dependencies">{{x}}</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="d-flex justify-content-center my-2">
+        <a class="btn btn-success" href="{{this.wayToEnvironment}}/?assignmentId={{id}}&token={{token}}">Solve
+            Assignment</a>
+    </div>
+    <!-- <div class="d-flex justify-content-center my-2">
+        <a class="btn btn-success" href="{{this.wayToEnvironment}}">Solve
+            Assignment</a>
+    </div> -->
+
+    <hr>
+
+</div>

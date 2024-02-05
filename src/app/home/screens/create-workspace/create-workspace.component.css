@@ -1,0 +1,24 @@
+.signature {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .signature span {
+    display: inline-block;
+    position: relative;
+    animation: signature-anim 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes signature-anim {
+    0% { transform: translateX(-20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+
+  .para{
+    font-size: 20px;
+  }
+  

@@ -1,0 +1,64 @@
+<div class="card bg-transparent border rounded-3">
+    <!-- Card header -->
+    <div class="card-header bg-transparent border-bottom">
+        <h5 class="card-header-title mb-0">Edit Software Lab</h5>
+    </div>
+    <!-- Card body START -->
+    <form action="" [formGroup]="editLabForm" (ngSubmit)="onLabFormSubmit()">
+        <div class="card-body">
+            <!-- Lab Name -->
+            <div class="mb-3">
+                <label class="form-label"><i class="bi-solid bi-pc-display"></i> Lab Name</label>
+                <input class="form-control" type="text" placeholder="Enter Lab Name" formControlName="labName">
+            </div>
+
+            <!-- Instructor -->
+            <div class="mb-3">
+                <label class="form-label"><i class="bi-solid bi-magic"></i> Appoint Instructor</label>
+                <select class="form-select" aria-label="Default select example" formControlName="instructor">
+                    <option selected>Steve Jobs</option>
+                    <option value="1">Bill Gates</option>
+                    <option value="2">Ashutosh Kumbhar</option>
+                    <option value="3">Jeff Bezos</option>
+                </select>
+            </div>
+
+            <!-- Academic Year -->
+            <div class="mb-3">
+                <label class="form-label"><i class="bi-solid bi-calendar-date me-2"></i>Academic
+                    Year</label>
+                <input class="form-select" type="number" min="2014" max="2099" step="1" value="2019"
+                    formControlName="year" />
+            </div>
+
+            <!-- Classroom -->
+            <div class="mb-3">
+                <label class="form-label"><i class="bi-solid bi-mortarboard-fill"></i> Classroom</label>
+                <select class="form-select" aria-label="Default select example" formControlName="classroom">
+                    <option selected>SE</option>
+                    <option value="1">TE</option>
+                    <option value="2">BE</option>
+                </select>
+            </div>
+
+            <!-- Button -->
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary mb-0">Save Changes</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Card body END -->
+</div>
+
+
+<div class="card bg-transparent border rounded-3 my-4">
+    <div class="card-header bg-transparent border-bottom">
+        <h5 class="card-header-title mb-0 text-danger">Danger Zone</h5>
+    </div>
+
+    <div class="card-body my-3">
+        <button class="btn btn-danger">Delete Lab</button>
+    </div>
+
+</div>

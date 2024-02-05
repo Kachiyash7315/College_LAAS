@@ -1,0 +1,60 @@
+<section>
+    <div class="spacer layer1">
+        <div class="container position-relative">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <!-- Title -->
+                    <h1 class="heading">Apply as Instructor</h1>
+                    <p>Satisfied conveying a dependent contented he gentleman agreeable do be. Delivered dejection
+                        necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do.</p>
+                    <!-- Button -->
+                    <a href="#fill-instructor-form" class="btn btn-primary mb-0">Start Blogging today</a>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <!-- Image -->
+                    <img src="assets/images/element/become-author.png" class="h-300px h-xl-400px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--form-->
+<section>
+    <div class="container p-3">
+        <form class="row g-3 justify-content-between" [formGroup]="becomeauthorForm" (ngSubmit)="onSubmit()">
+            <div class="col-md-8 mx-auto">
+                <h2 class="mb-3">Please Fill This Form</h2>
+                <div class="col-12">
+                    <div class="row g-xl-0 align-items-center">
+                        <div class="col-lg-4">
+                            <h6 class="mb-lg-0">Contact No<span class="text-danger">*</span></h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="firstName" formControlName="contactNumber">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 my-2">
+                    <div class="row g-xl-0 align-items-center">
+                        <div class="col-lg-4">
+                            <h6 class="mb-lg-0">Tell Us About You<span class="text-danger">*</span></h6>
+                        </div>
+                        <div class="col-lg-8">
+                            <textarea class="form-control" formControlName="about"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-sm-end">
+                    <button class="btn btn-primary mb-0" type="submit">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</section>
